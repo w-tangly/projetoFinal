@@ -31,6 +31,11 @@ header {
     font-family: SUSE;
     font-weight: bold;
 }
+
+.logo{
+    width: 5rem;
+    padding-right: 1rem;
+}
 /* Fim HEADER LOGO/SEARCH */
 
 /* BOOTSTRAP SEARCH */
@@ -43,10 +48,10 @@ header {
 }
 
 .input {
-    font-size: 22px;
+    font-size: 18px;
     padding: 5px 10px;
-    width: 500px;
-    height: 60px;
+    width: 30rem;
+    height: 2.5rem;
     padding-left: 1rem;
     outline: none;
     border: none;
