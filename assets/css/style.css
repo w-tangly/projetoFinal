@@ -5,8 +5,10 @@
     padding: 0;
     box-sizing: border-box;
     color: #fff;
+    overflow-x: hidden;
     text-decoration: none;
     list-style: none;
+    font-family: Inter;
 }
 
 /* HEADER LOGO/SEARCH */
@@ -32,10 +34,11 @@ header {
     font-weight: bold;
 }
 
-.logo{
+.logo {
     width: 5rem;
     padding-right: 1rem;
 }
+
 /* Fim HEADER LOGO/SEARCH */
 
 /* BOOTSTRAP SEARCH */
@@ -63,7 +66,7 @@ header {
 }
 
 .input::placeholder {
-    color: black;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .search {
@@ -72,27 +75,107 @@ header {
     width: 2rem;
     height: 2rem;
 }
+
 /* Fim BOOTSTRAP SEARCH */
 
 /* HEADER NAV */
-.nav{
+.nav {
     background-color: #F2780C;
 }
 
-ul{
+.body-prods {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: hidden;
+    background-color: #A64812;
+
+}
+
+.prods {
+    width: 90%;
+    height: 60%;
+    margin: 5%;
+    border-radius: 20px;
+    background-color: #F2F3F4;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.card {
+    height: 80.225%;
+    width: 27%;
+    margin: 3%;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+ul {
     display: flex;
     flex-direction: row;
-    padding:.5rem 0;
+    padding: .5rem 0;
     justify-content: center;
     align-items: center;
 }
 
-li{
+li {
     padding: 0 1.5rem;
     border-right: 1px solid #fff;
-    font-family: Inter;
 }
 
-#last{
-    border:none;
+#last {
+    border: none;
+}
+
+.slide-container {
+    width: 100vw;
+    height: 50vh;
+    margin: 0;
+    position: relative;
+}
+
+.image-container {
+    width: 300vw;
+    height: 50vh;
+    display: flex;
+    animation: slideAnimation 9s infinite ease-in-out;
+    animation-play-state: running;
+}
+
+.slider-image {
+    width: 100vw;
+    height: 50vh;
+    object-fit: cover;
+}
+
+#slider-image1:target~.image-container {
+    animation: none;
+    transform: translateX(0);
+}
+
+#slider-image2:target~.image-container {
+    animation: none;
+    transform: translateX(-100vw);
+}
+
+#slider-image3:target~.image-container {
+    animation: none;
+    transform: translateX(-200vw);
+}
+
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(0);
+    }
+
+    33.33% {
+        transform: translateX(-100vw);
+    }
+
+    66.66% {
+        transform: translateX(-200vw);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
