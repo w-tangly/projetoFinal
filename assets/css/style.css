@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* HEADER LOGO/SEARCH */
+header {
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    background-color: #A64812;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.div-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    font-family: SUSE;
+    font-weight: bold;
+}
+/* Fim HEADER LOGO/SEARCH */
+
+/* BOOTSTRAP SEARCH */
+.search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 100%;
+    margin: 1rem;
+}
+
+.input {
+    font-size: 22px;
+    padding: 5px 10px;
+    width: 500px;
+    height: 60px;
+    padding-left: 1rem;
+    outline: none;
+    border: none;
+    background: #fff;
+    color: #000000;
+    border-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    transition: .3s ease;
+}
+
+.input::placeholder {
+    color: black;
+}
+
+.search {
+    position: absolute;
+    right: 10px;
+    width: 2rem;
+    height: 2rem;
+}
+/* Fim BOOTSTRAP SEARCH */
+
+/* HEADER NAV */
+.nav{
+    background-color: #F2780C;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    padding:.5rem 0;
+    justify-content: center;
+    align-items: center;
+}
+
+li{
+    padding: 0 1.5rem;
+    border-right: 1px solid #fff;
+}
+
+#last{
+    border:none;
+}
