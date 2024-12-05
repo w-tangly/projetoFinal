@@ -90,7 +90,6 @@ header {
 
 .body-prods {
     width: 100vw;
-    height: 100vh;
     overflow-y:hidden;
     background-color: #A64812;
 }
@@ -165,7 +164,7 @@ ul {
     width: 300px;
 }
 
-li {
+.nav li {
     padding: 0 1.5rem;
     border-right: 1px solid #fff;
 }
@@ -252,6 +251,8 @@ footer{
 }
 /* Fim FOOTER */
 
+
+
 @media(width<600px){
     .search-bar, .input, .search {
         display: none;
@@ -282,4 +283,57 @@ footer{
         width: 80vw;
         align-items: center;
     }
+
+    .nav2{
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .nav2 ul{
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    .nav2 li{
+        height: 60px;
+    }
+    
+    .nav2 li:first-child{
+        margin-right: auto;
+    }
+    
+    .nav2 a{
+        height:100%;
+        padding: 0px 30px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: #fff;
+    }
+    
+    .nav2 a:hover{
+        fill: #fff;
+    }
+    
+    .icon{
+        fill: #fff;
+    }
+    
+    .sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 280px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    backdrop-filter: blur(10px);
+}
 }
