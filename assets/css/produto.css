@@ -23,16 +23,18 @@ header {
     align-items: center;
 }
 
-.div-logo {
+.div-logo a {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     margin: 1rem;
     font-family: SUSE;
     font-weight: bold;
+    color: #fff;
 }
 
-.logo{
+.logo {
     width: 5rem;
     padding-right: 1rem;
 }
