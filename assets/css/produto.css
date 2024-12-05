@@ -109,6 +109,7 @@ ul {
     border-right: 1px solid #fff;
     font-family: Inter;
     font-weight: 400;
+    color: #fff;
 }
 
 #last {
@@ -367,6 +368,10 @@ h3.preco {
     }
 
     .sidebar {
+        display: none;
+    }
+
+    .nav2{
         display: none;
     }
 }
