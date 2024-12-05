@@ -41,9 +41,13 @@ header {
     padding-right: 1rem;
 }
 
+.burg{
+    display: none;
+}
 /* Fim HEADER LOGO/SEARCH */
 
-/* BOOTSTRAP SEARCH */
+
+/* BOOTSTRAP SEARCH (modificado)*/
 .search-bar {
     display: flex;
     align-items: center;
@@ -68,7 +72,7 @@ header {
 }
 
 .input::placeholder {
-    color: rgba(0, 0, 0, 0.5);
+    color: black;
 }
 
 .search {
@@ -77,7 +81,6 @@ header {
     width: 2rem;
     height: 2rem;
 }
-
 /* Fim BOOTSTRAP SEARCH */
 
 /* HEADER NAV */
@@ -88,9 +91,8 @@ header {
 .body-prods {
     width: 100vw;
     height: 100vh;
-    overflow-y: hidden;
+    overflow-y:hidden;
     background-color: #A64812;
-
 }
 
 .prods {
@@ -105,16 +107,17 @@ header {
 }
 
 .card {
-    height: 80.225%;
+    height: 80.25%;
     width: 27%;
     margin: 3%;
     padding: 1.5%;
     overflow: hidden;
     background-color: #fff;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     padding-left: 5%;
     border-radius: 20px;
-    justify-content: center, ;
+    justify-content: center;
 }
 
 ul {
@@ -232,7 +235,7 @@ footer{
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* margin-top: 7.55rem; */
+    
     padding: 1rem 0 0 0;
 }
 
@@ -248,3 +251,35 @@ footer{
     font-weight: lighter;
 }
 /* Fim FOOTER */
+
+@media(width<600px){
+    .search-bar, .input, .search {
+        display: none;
+    }
+
+    body{
+        overflow: scroll;
+    }
+
+    .nav{
+        display: none;
+    }
+ 
+    .burg{
+        display: block;
+    }
+
+    .prods{
+        display: flex;
+        flex-direction: column;
+        height:150%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        height: 150%;
+        width: 80vw;
+        align-items: center;
+    }
+}
