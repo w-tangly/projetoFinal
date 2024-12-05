@@ -14,8 +14,10 @@
             <div class="header">
                 <!-- LOGO -->
                 <div class="div-logo">
-                    <a href="./index.html"><img src="./assets/img/logo.png" alt="" class="logo"></a>
-                    <h1>OlePix</h1>
+                    <a href="./index.html"><img src="./assets/img/logo.png" alt="" class="logo">
+                        <h1>OlePix</h1>
+                    </a>
+
                 </div>
 
                 <!-- BOOTSTRAP SEARCH -->
@@ -23,6 +25,30 @@
                     <input type="search" placeholder="Busque seu produto" class="input">
                     <img src="./assets/img/searchIcon.png" alt="" class="search">
                 </div>
+
+                <div class="nav2">
+                    <ul class="burg">
+                        <li onclick="showSidebar()"><a href="#"><svg class="icon" xmlns="http://www.w3.org/2000/svg"
+                                    height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
+                                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                                </svg></a></li>
+                    </ul>
+                </div>
+
+
+                <ul class="sidebar">
+                    <li onclick="hideSidebar()"><a href="#"><svg class="icon-x" xmlns="http://www.w3.org/2000/svg"
+                                height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                <path
+                                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                            </svg></a></li>
+                    <li><a class="hideDesktop"></a></li>
+                    <li><a href="./index.html">Início</a></li>
+                    <li><a href="#">Computadores</a></li>
+                    <li><a href="#">Hardware</a></li>
+                    <li><a href="#">Entre em contato</a></li>
+                    <li><a href="#">Sobre a empresa</a></li>
+                </ul>
             </div>
             <div class="nav">
                 <nav>
@@ -81,5 +107,15 @@
             Pedro Henrique Klarosk de Araújo</h2>
     </footer>
 </body>
+<script>
+    function showSidebar() {
+        const sidebar = document.querySelector(".sidebar")
+        sidebar.style.display = "flex";
+    }
 
+    function hideSidebar() {
+        const sidebar = document.querySelector(".sidebar")
+        sidebar.style.display = "none";
+    }
+</script>
 </html>

@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=SUSE:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 * {
     margin: 0;
@@ -7,6 +8,8 @@
     text-decoration: none;
     list-style: none;
     font-family: Inter;
+    color: #fff;
+    overflow-x: hidden;
 }
 
 /* HEADER LOGO/SEARCH */
@@ -94,7 +97,7 @@ ul{
     align-items: center;
 }
 
-li{
+.nav li{
     padding: 0 1.5rem;
     border-right: 1px solid #fff;
     font-family: Inter;
@@ -196,4 +199,109 @@ h3.preco{
   height: 3.3rem;
   width: 20rem;
   border-radius: 15px;
+}
+
+@media (max-width: 800px) {
+    .hideMobile {
+        display: none;
+    }
+
+    .search-bar,
+    .input,
+    .search {
+        display: none;
+    }
+
+    body {
+        overflow: scroll;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .burg {
+        display: block;
+    }
+
+    .prods {
+        display: flex;
+        flex-direction: column;
+        height: 150%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        height: 150%;
+        width: 80vw;
+        align-items: center;
+    }
+
+    .nav2 {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .nav2 ul {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .nav2 li {
+        height: 60px;
+    }
+
+    .nav2 li:first-child {
+        margin-right: auto;
+    }
+
+    .nav2 a {
+        height: 100%;
+        padding: 0px 30px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: #fff;
+    }
+
+    .nav2 a:hover {
+        fill: #fff;
+    }
+
+    .icon {
+        fill: #fff;
+    }
+
+    .icon-x{
+        fill: #fff;
+        margin-right: 15rem;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 280px;
+        z-index: 999;
+        background-color: rgba(255, 255, 255, 0.2);
+        box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        backdrop-filter: blur(10px);
+    }
+}
+
+@media (min-width: 800px) {
+    .hideDesktop {
+        display: none;
+    }
+    .sidebar{
+        display: none;
+    }
 }
